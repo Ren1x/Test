@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Testing</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="DataTables/datatables.css"/>
+	<link rel="stylesheet" href="css/testing.css">
+</head>
+<body>
+		<!-- Шапка -->
+	<header>
+		<div class="jumbotron text-center">
+			<h1>База данных</h1>
+		</div>
+	</header>
+
+	<!-- Основная информация -->
+	<main role="main">
+		<article class="my-2">
+
+			<!-- Кнопки с выбором какую информацию загружать -->
+			<div id="btnContainer" class="text-center mb-4">
+				<h4>Выберите объем данных</h4>
+				<input id="btnSmall" class="btn btn-dark p-1" type="submit" value="Маленький">
+				<input id="btnBig" class="btn btn-dark p-1" type="submit" value="Большой">
+			</div>
+
+			<div>
+			<!-- Анимация при загрузке данных -->
+				<div id="progressBar" class="progress justify-content-center mt-5">
+					<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 30%">Загрузка...</div>
+				</div>
+
+			<!-- Сообщение об ошибке -->
+				<div id="errorMessage" class="container text-center justify-content-center my-5">
+					<p class="pt-3"></p>
+				</div>
+			</div>
+
+			<!-- Таблица с базой данных -->
+			<div id="tableContainer">
+				<table class="table table-hover mt-5">
+					<thead>
+						<tr id="headingTable">
+							<th data="id">Id</th>
+							<th data="firstname">Firstname</th>
+							<th data="lastname">Lastname</th>
+							<th data="phone">Phone</th>
+							<th data="email">Email</th>
+						</tr>
+					</thead>
+
+					<!-- Сюда загружаются данные -->
+					<tbody id="dataTable">
+
+					</tbody>
+				</table>
+			</div>
+			<section>
+				
+				<!-- Контейнер с дополнительной информацией, при клике на ячейку таблицы -->
+				<div class="container">
+					<div class="row">
+						<div id="selectedCellInfo" class="col-md-6 offset-md-3 py-2 my-5">
+							
+						</div>
+					</div>
+				</div>
+			</section>
+		</article>
+	</main>
+	<!-- jQuery, Bootstrap JS, DataTables -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="DataTables/datatables.js"></script>
+	<script src="js/testing.js"></script>
+	<!-- 	LiveReload плагин -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

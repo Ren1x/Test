@@ -1,0 +1,94 @@
+body {
+	overflow-y: scroll;
+	transition: 0.5s all ease-in-out;
+	background: #eaffbe78 ;
+}
+
+/* Отображение таблицы */
+table {
+	background-color: rgb(0,123,255,0.25) !important;
+	border: 1px #a8b2bb solid;
+	border-radius: 5px; 
+}
+
+#tableContainer{
+	display: none;
+}
+
+.centeringTable {
+	width: 50%;
+	margin: auto;
+}
+/* --------------------------------- */
+
+/* Шапка */
+.jumbotron {
+	background-color: #c8dbfa87 !important;
+}
+
+
+/* Пагинация (кнопки переключения страниц в таблице) */
+#DataTables_Table_0_paginate {
+	position: absolute;
+}
+
+#DataTables_Table_0_paginate a {
+	background-color: #343a40 ;
+	border-color: #171a1d;
+	border-radius: .25rem;
+	color: white;
+}
+
+#DataTables_Table_0_paginate .page-item.active .page-link {
+	background-color: #5c6752f2 ;
+	border-color: #171a1d;
+	border-radius: .25rem;
+}
+/* ------------------------------ */
+
+/* Кнопки навигации таблицы */
+.navigateButtonsTable {
+	width: 30% ;
+	margin: 0 auto 10px ;
+}
+
+/* Блок с доп. информацией из ячейки таблицы */
+#selectedCellInfo {
+	display: none;
+	border: 1px #a8b2bb solid;
+	background-color: rgb(0,123,255,0.25);
+	border-radius: .25rem;
+	line-height: 1.2;
+
+}
+
+/* Полоса загрузки */
+#progressBar {
+	display: none;
+	background-color: transparent;
+	height: 1.5rem;
+}
+#progressBar > div {
+	background-color: #cd5c5c;
+	border-radius: .25rem;
+}
+/* --------------------- */
+
+/* Сообщение об ошибке */
+#errorMessage {
+	display: none;
+	color: #ff7676;
+	background-color: #343a40 ;
+	border: 1px #ff7676 solid;
+	border-radius: .25rem;
+	width: 20%;
+}
+
+
+/* Медиа запрос для навигационных кнопок таблицы 
+	(что бы не наезжали друг на друга) */
+@media (max-width:1200px) and (min-width: 764px) {
+	.navigateButtonsTable {
+		width: 60%;
+	}
+}
