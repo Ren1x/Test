@@ -82,9 +82,15 @@ $(document).ready(() => {
 		// Показывает блок с ошибкой
 		$errorMessage.show(400);
 
+		//Делает кнопку активной
+		enableBtn();
+
 		// При ошибке меняется бэкграунд
 		changeBgColor("#f77979ab");
 	};
+
+	// Делает кнопку активной
+	const enableBtn = () => $btnContainer.children('input').removeClass('disabled');
 
 	// Меняет цвет фона у body
 	const changeBgColor = color => {
@@ -186,13 +192,10 @@ $(document).ready(() => {
 		getDataResponse(url)
 			.then(data => createTable(data))
 			.then(() => showTable())
-			.then(() => {
-				$btnContainer.children('input').removeClass('disabled');
-			})
+			.then(() => enableBtn())
 			.catch(e => error(e));
-
-			
 	};
+
 
 	// Проверяем на какую кнопку нажали
 	// и запускаем функцию executeTableLoad c соответствующим аргументом
